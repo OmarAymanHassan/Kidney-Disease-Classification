@@ -1,3 +1,9 @@
-
-key: val
-
+ALIGMENTATION: True
+IMAGE_SIZE: [224,224,3]
+BATCH_SIZE: 32
+INCLUDING_TOP: 0
+EPOCHS: 3
+CLASSES: 2
+MODEL_NAME: inception_resnet_v2
+WEIGHTS: inception_resnet_v2
+LEARNING_RATE: 0.01
