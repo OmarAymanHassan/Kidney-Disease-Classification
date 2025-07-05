@@ -1,2 +1,65 @@
 [2025-07-05 15:55:56,659: INFO: main: Welcome to the Custom logger]
 [2025-07-05 16:12:49,174: INFO: main: Welcome to the Custom logger]
+[2025-07-05 20:57:50,211: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 20:57:50,214: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 20:59:55,940: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 20:59:55,943: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:01:13,371: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:01:13,373: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:01:13,375: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:01:13,377: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:03:00,169: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:03:00,171: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:03:00,174: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:03:00,175: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:03:00,177: INFO: 2417885337: Downloading Data from https://drive.google.com/file/d/1JVnAlKEgAsle2tRMmJ0IfGnm7a-cy7YE/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-05 21:16:18,731: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:16:18,733: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:16:18,735: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:16:18,736: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:18:08,183: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:18:08,185: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:18:08,187: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:18:08,190: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:19:10,539: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:19:10,542: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:19:10,544: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:19:10,547: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:19:32,794: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:19:32,797: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:19:32,798: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:19:32,799: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:20:06,411: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:20:06,414: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:20:06,418: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:20:06,420: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:45:10,799: INFO: main: Welcome to the Custom logger]
+[2025-07-05 21:45:10,800: INFO: main: >>>>>>>>>> Satge Data Ingestion Stage Started <<<<<<<<<<]
+[2025-07-05 21:45:10,801: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:45:10,802: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:45:10,802: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:45:10,802: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:45:10,804: ERROR: main: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip']
+Traceback (most recent call last):
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\main.py", line 11, in <module>
+    data_ingestion_one.main()
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\src\CNNClassifierKidneyDiseases\pipeline\first_data_ingestion.py", line 25, in main
+    raise e
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\src\CNNClassifierKidneyDiseases\pipeline\first_data_ingestion.py", line 23, in main
+    data_ingestion.extraxt_zip_file()
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\src\CNNClassifierKidneyDiseases\components\data_ingestion.py", line 40, in extraxt_zip_file
+    with zipfile.ZipFile(self.config.local_data_files , "r")as zip_ref:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\omark\AppData\Roaming\uv\python\cpython-3.12.10-windows-x86_64-none\Lib\zipfile\__init__.py", line 1336, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/data_ingestion/data.zip'
+[2025-07-05 21:45:39,705: INFO: main: Welcome to the Custom logger]
+[2025-07-05 21:45:39,705: INFO: main: >>>>>>>>>> Satge Data Ingestion Stage Started <<<<<<<<<<]
+[2025-07-05 21:45:39,708: INFO: common: yaml file config\config.yaml loaded successfully]
+[2025-07-05 21:45:39,709: INFO: common: yaml file params.yaml loaded successfully]
+[2025-07-05 21:45:39,710: INFO: common: Created Directory at : artifacts]
+[2025-07-05 21:45:39,711: INFO: common: Created Directory at : artifacts/data_ingestion]
+[2025-07-05 21:45:39,712: INFO: data_ingestion: Downloading Data from https://drive.google.com/file/d/1JVnAlKEgAsle2tRMmJ0IfGnm7a-cy7YE/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-05 21:47:50,187: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1JVnAlKEgAsle2tRMmJ0IfGnm7a-cy7YE/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2025-07-05 21:47:51,651: INFO: main: >>>>>>>>>> Stage Data Ingestion Stage Completed <<<<<<<<<<]
