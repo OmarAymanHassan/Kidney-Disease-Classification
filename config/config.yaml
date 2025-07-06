@@ -8,9 +8,18 @@ data_ingestion:
   unzip_dir: artifacts/data_ingestion
 
 
+# For the prepration base model : 2nd stage
 
 prepare_base_model:
   root_dir: artifacts/prepare_base_model
   base_model_path: artifacts/prepare_base_model/base_model.pth
   updated_base_model_path: artifacts/prepare_base_model/base_model_updated.pth
+
+
+# For the training : 3rd stage
+
+training:
+  root_dir: artifacts/training
+  training_model_path: artifacts/training/model.pth
+
 
