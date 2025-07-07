@@ -2,7 +2,7 @@ from src.CNNClassifierKidneyDiseases import logger
 from src.CNNClassifierKidneyDiseases.pipeline.first_data_ingestion import DataIngestionTrainingPipeline
 from src.CNNClassifierKidneyDiseases.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
 from src.CNNClassifierKidneyDiseases.pipeline.stage_03_model_training import ModelTrainingPipeline
-
+from src.CNNClassifierKidneyDiseases.pipeline.stage_04_model_evaluation import EvaluationPipeline
 logger.info("Welcome to the Custom logger")
 STAGE_NAME = "Data Ingestion Stage"
 
@@ -48,3 +48,19 @@ except Exception as e:
     logger.exception(e)
     raise e
 
+
+
+## Model Evaluation ##
+
+STAGE_NAME=  "Evaluation Stage"
+
+
+try:
+    logger.info(f"***************************")
+    logger.info(f">>>>>>>>>> stage {STAGE_NAME} Started <<<<<<<<<<")
+    obj = EvaluationPipeline()
+    obj.main()
+    logger.info(f">>>>>>>>>> Stage {STAGE_NAME} Completed Successfully <<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e

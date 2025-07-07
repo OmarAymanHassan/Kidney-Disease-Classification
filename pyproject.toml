@@ -12,6 +12,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "dagshub>=0.5.10",
     "dvc>=3.60.1",
     "ensure==1.0.2",
     "flask>=3.1.1",
@@ -20,10 +21,12 @@ dev = [
     "joblib>=1.5.1",
     "kidney-disease-classification",
     "matplotlib>=3.10.3",
-    "mlflow>=3.1.1",
+    "mlflow<3",
     "notebook>=7.4.4",
     "numpy>=2.3.1",
     "pandas>=2.3.0",
+    "protobuf==3.20.3",
+    "pyarrow>=20",
     "python-box==6.0.2",
     "pyyaml>=6.0.2",
     "scipy>=1.16.0",

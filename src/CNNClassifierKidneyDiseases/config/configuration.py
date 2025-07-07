@@ -3,6 +3,7 @@ from src.CNNClassifierKidneyDiseases.utils.common import read_yaml , create_dire
 from src.CNNClassifierKidneyDiseases.entity.config_entity import DataIngestionConfig
 from src.CNNClassifierKidneyDiseases.entity.config_entity import PrepareBaseModelConfig
 from src.CNNClassifierKidneyDiseases.entity.config_entity import TrainingConfig
+from src.CNNClassifierKidneyDiseases.entity.config_entity import EvaluationConfig
 import os 
 
 
@@ -76,6 +77,21 @@ class ConfigurationManager:
 
         return training_config
 
+# Model Evaluation 
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+
+            path_of_model="artifacts/training/model.pth",
+            training_data="artifacts/data_ingestion/kidney-ct-scan-image",
+            mlflow_uri="https://dagshub.com/omarkhadrawy10/Kidney-Disease-Classification.mlflow",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+
+            
+        )
+
+        return eval_config
 
 
 # Configuration For Model Training 

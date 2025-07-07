@@ -1,7 +1,8 @@
 torch
 pandas
 dvc
-mlflow
+mlflow < 3
+protobuf ==3.20.3
 notebook
 numpy
 matplotlib
@@ -18,4 +19,5 @@ Flask-Cors
 gdown
 typeguard
 timm
+dagshub
 -e .
