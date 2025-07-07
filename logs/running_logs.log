@@ -847,3 +847,81 @@ NameError: name 'EvaluationPipeline' is not defined
 [2025-07-07 19:44:25,150: INFO: helpers: Initialized MLflow to track repo "omarkhadrawy10/Kidney-Disease-Classification"]
 [2025-07-07 19:44:25,152: INFO: helpers: Repository omarkhadrawy10/Kidney-Disease-Classification initialized!]
 [2025-07-07 19:49:28,874: INFO: stage_04_model_evaluation: >>>>>>>>>> Stage Evaluation Stage Completed Successfully <<<<<<<<<<]
+[2025-07-07 23:34:24,581: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2025-07-07 23:34:24,582: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-07 23:34:51,903: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:34:51] "GET / HTTP/1.1" 200 -]
+[2025-07-07 23:35:40,964: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\app.py", line 39, in predictRoute
+    result =clApp.classifier.predict()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\src\CNNClassifierKidneyDiseases\pipeline\prediction.py", line 14, in predict
+    model = torch.load(os.path.join("artifacts","training" ,"model.pth"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\torch\serialization.py", line 1524, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL timm.models.inception_resnet_v2.InceptionResnetV2 was not an allowed global by default. Please use `torch.serialization.add_safe_globals([timm.models.inception_resnet_v2.InceptionResnetV2])` or the `torch.serialization.safe_globals([timm.models.inception_resnet_v2.InceptionResnetV2])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+[2025-07-07 23:35:40,969: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:35:40] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-07-07 23:37:52,065: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2025-07-07 23:37:52,065: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-07 23:37:57,358: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:37:57] "GET / HTTP/1.1" 200 -]
+[2025-07-07 23:38:05,592: ERROR: app: Exception on /predict [POST]]
+Traceback (most recent call last):
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\flask_cors\decorator.py", line 121, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+                         ^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\app.py", line 39, in predictRoute
+    result =clApp.classifier.predict()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\src\CNNClassifierKidneyDiseases\pipeline\prediction.py", line 14, in predict
+    model = torch.load(os.path.join("artifacts","training" ,"model.pth"))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ITI\DS Track\Deep Learning\Projects\Kidney Classification\Kidney-Disease-Classification\.venv\Lib\site-packages\torch\serialization.py", line 1524, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL timm.models.inception_resnet_v2.InceptionResnetV2 was not an allowed global by default. Please use `torch.serialization.add_safe_globals([timm.models.inception_resnet_v2.InceptionResnetV2])` or the `torch.serialization.safe_globals([timm.models.inception_resnet_v2.InceptionResnetV2])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+[2025-07-07 23:38:05,595: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:38:05] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
