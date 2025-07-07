@@ -9,7 +9,7 @@ class PredictionPipeline:
 
     def __init__(self,filename):
         self.filename = filename
-        self.model = torch.load(os.path.join("artifacts", "training", "model.pth") ,weights_only=False)
+        self.model = torch.load(os.path.join("model", "model.pth") ,weights_only=False)
         self.model.eval()  # Set model to evaluation mode
 
     def predict(self):
