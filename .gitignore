@@ -1,2 +1,11 @@
 mlruns/*
 artifacts/*
+model/*
+__pycache__/*
+.env
+.DS_Store
+.vscode
+.gitignore
+.git
+.gitignore
+.gitignore
