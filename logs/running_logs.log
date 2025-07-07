@@ -925,3 +925,11 @@ _pickle.UnpicklingError: Weights only load failed. This file can still be loaded
 
 Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
 [2025-07-07 23:38:05,595: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:38:05] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[2025-07-07 23:43:31,856: INFO: _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[2025-07-07 23:43:31,856: INFO: _internal: [33mPress CTRL+C to quit[0m]
+[2025-07-07 23:43:36,681: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:43:36] "GET / HTTP/1.1" 200 -]
+[2025-07-07 23:43:46,511: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:43:46] "POST /predict HTTP/1.1" 200 -]
+[2025-07-07 23:43:54,559: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:43:54] "POST /predict HTTP/1.1" 200 -]
+[2025-07-07 23:44:06,166: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:44:06] "POST /predict HTTP/1.1" 200 -]
+[2025-07-07 23:44:12,318: INFO: _internal: 127.0.0.1 - - [07/Jul/2025 23:44:12] "POST /predict HTTP/1.1" 200 -]
