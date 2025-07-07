@@ -1,0 +1,54 @@
+stages:
+  data_ingestion:
+    cmd: set PYTHONPATH=. && python 
+      src/CNNClassifierKidneyDiseases/pipeline/first_data_ingestion.py
+    deps:
+    - config/config.yaml
+    - src/CNNClassifierKidneyDiseases/pipeline/first_data_ingestion.py
+    outs:
+    - artifacts/data_ingestion/kidney-ct-scan-image
+
+
+  prepare_base_model:
+    cmd: set PYTHONPATH=. && python 
+      src/CNNClassifierKidneyDiseases/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - src/CNNClassifierKidneyDiseases/pipeline/stage_02_prepare_base_model.py
+    - config/config.yaml
+    params:
+    - IMAGE_SIZE
+    - INCLUDING_TOP
+    - CLASSES
+    - WEIGHTS
+    - LEARNING_RATE
+    outs:
+    - artifacts/prepare_base_model
+
+  model_training:
+    cmd: set PYTHONPATH=. && python 
+      src/CNNClassifierKidneyDiseases/pipeline/stage_03_model_training.py
+    deps:
+    - src/CNNClassifierKidneyDiseases/pipeline/stage_03_model_training.py
+    - config/config.yaml
+    params:
+    - IMAGE_SIZE
+    - EPOCHS
+    - BATCH_SIZE
+    - AUGMENTATION
+    outs:
+    - artifacts/training/model.pth
+
+  model_evaluation:
+    cmd: set PYTHONPATH=. && python 
+      src/CNNClassifierKidneyDiseases/pipeline/stage_04_model_evaluation.py
+    deps:
+    - src/CNNClassifierKidneyDiseases/pipeline/stage_04_model_evaluation.py
+    - config/config.yaml
+    - artifacts/training/model.pth
+    - artifacts/data_ingestion/kidney-ct-scan-image
+    params:
+    - IMAGE_SIZE
+    - BATCH_SIZE
+    metrics:
+    - scores.json:
+        cache: false
